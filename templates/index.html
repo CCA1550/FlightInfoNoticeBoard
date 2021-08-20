@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>寰宇小队终端</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+	</head>
+	<body>
+		<header>
+			<div class="header_title">
+				<h1>寰宇小队飞行终端系统 v1.0</h1>
+				<div class="show_time">
+					<div id="show_time">
+						<script src="{% static 'js/timeShow.js' %}" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li><a href="/notice" target="_blank">信息公布</a></li>
+                            <li><a href="/signin" target="_blank">信息发布</a></li>
+                            <li><a href="#" target="_blank">统计平台</a></li>
+                            <li><a href="#" target="_blank">反馈</a></li>
+                            <div style="clear: both;"></div>
+                        </ul>
+                    </nav>
+                </div>
+			</div>
+		</header>
+		
+		<article>
+			<!-- <hr> -->
+			<section class="flightInfo">
+				<div id="banner">
+					<img src="../static/img/画板%201.png" alt="">
+					<div class="article_title">
+						<h2>当前位置：首页</h2>
+					</div>
+				</div>
+			</section>
+		</article>
+		
+		<footer>
+			<p>设计&开发: CCA1550</p>
+			<p>©CCA1550 2021/8</p>
+		</footer>
+	</body>
+</html>

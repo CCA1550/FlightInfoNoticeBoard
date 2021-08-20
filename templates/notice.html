@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>寰宇小队终端-信息公布</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/notice.css' %}">
+	</head>
+	<body>
+		<header>
+			<div class="header_title">
+				<h1>寰宇小队飞行终端系统 v1.0</h1>
+				<div class="show_time">
+					<div id="show_time">
+						<script src="{% static 'js/timeShow.js' %}" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <li><a href="/index" target="_blank">首页</a></li>
+                            <li><a href="">信息公布</a></li>
+                            <li><a href="/release/" target="_blank">信息发布</a></li>
+                            <li><a href="#" target="_blank">统计平台</a></li>
+                            <li><a href="#" target="_blank">反馈</a></li>
+                            <div style="clear: both;"></div>
+                        </ul>
+                    </nav>
+                </div>
+			</div>
+		</header>
+
+		<article>
+            <div class="info">
+                <table border="6">
+                    <tr>
+                        <td>日期</td>
+                        <td>进场时间</td>
+                        <td>起飞时间</td>
+                        <td>时区</td>
+                    </tr>
+                    <tr>
+                        <td>{{ date }}</td>
+                        <td>{{ entryTime }}</td>
+                        <td>{{ takeOffTime }}</td>
+                        <td>UTC+8</td>
+                    </tr>
+                </table>
+                <br>
+                <table border="6">
+                    <tr>
+                        <td>起飞机场</td>
+                        <td>ICAO</td>
+                        <td>降落机场</td>
+                        <td>ICAO</td>
+                        <td>飞行距离</td>
+                        <td>航路</td>
+                    </tr>
+                    <tr>
+                        <td>{{ SIDAps }}</td>
+                        <td>{{ SIDApsICAO }}</td>
+                        <td>{{ STARAps }}</td>
+                        <td>{{ STARApsICAO }}</td>
+                        <td>{{ flightDistance }}</td>
+                        <td>{{ route }}</td>
+                    </tr>
+                </table>
+                <br>
+                <table border="6">
+                    <tr>
+                        <td>建议机型</td>
+                        <td>
+                            <button type="button">
+                                <a href="https://efb.xflysim.com/fuel.html" target="_blank">
+                                    查询油量
+                                </a>
+                            </button>
+                        </td>
+                        <td>飞行高度</td>
+                        <td>飞行速度</td>
+                    </tr>
+                    <tr>
+                        <td>{{ planeType }}</td>
+                        <td></td>
+                        <td>{{ flightLevel }}</td>
+                        <td>{{ cruiseSpeed }}</td>
+                    </tr>
+                </table>
+                <br>
+                <table border="6">
+                    <tr>
+                        <td>其他信息</td>
+                    </tr>
+                    <tr>
+                        <td>{{ remarks }}</td>
+                    </tr>
+                </table>
+            </div>
+		</article>
+	</body>
+</html>

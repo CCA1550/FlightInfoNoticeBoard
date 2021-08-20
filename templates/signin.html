@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>寰宇小队终端</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}"/>
+	</head>
+	<body>
+		<header>
+			<div class="header_title">
+				<h1>寰宇小队飞行信息发布系统 v1.0</h1>
+				<div class="show_time">
+					<div id="show_time">
+						<script src="{% static 'js/timeShow.js' %}" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/index" target="_blank">首页</a></li>
+					<li><a href="/notice" target="_blank">信息公布</a></li>
+					<li><a href="">信息发布</a></li>
+					<li><a href="#">统计平台</a></li>
+					<li><a href="#">反馈</a></li>
+					<div style="clear: both;"></div>
+				</ul>
+			</nav>
+		</header>
+		<article>
+			<div class="signin">
+				<br><br><br>
+				<form method="POST" action="/skipping/" >
+                    {% csrf_token %}
+					请输入PIN码
+					<input type="text" name="password" />
+					<input type="submit" id="submit" name="  登    录  "/>
+				</form>
+			</div>
+		</article>
+	</body>
+</html>

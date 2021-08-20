@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>寰宇小队终端</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/release.css' %}"/>
+	</head>
+	<body>
+		<header>
+			<div class="header_title">
+				<h1>寰宇小队飞行信息发布系统 v1.0</h1>
+				<div class="show_time">
+					<div id="show_time">
+						<script src="{% static 'js/timeShow.js' %}" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/index" target="_blank">  首页</a></li>
+					<li><a href="/notice" target="_blank">信息公布</a></li>
+					<li><a href="/singin" target="_blank">信息发布</a></li>
+					<li><a href="#">统计平台</a></li>
+					<li><a href="#">反馈</a></li>
+					<div style="clear: both;"></div>
+				</ul>
+			</nav>
+		</header>
+		<article>
+			<br>
+			<div class="example">
+				<h2>**示例**</h2>
+				<p>210820  1300  1350</p>
+				<p>北京首都国际机场  ZBAA  上海虹桥国际机场  ZSSS</p>
+				<p>xxxx nm  ZBAA SID DIR SASAN STAR ZSSS</p>
+				<p>A320 B738  FL321  0.89MACH</p>
+				<p>xxxx纪念航班</p><br><br>
+			</div>
+			<div class="submit">
+				<form method="POST" action="/post/" >
+                    {% csrf_token %}
+					日期
+					<input type="text" name="date" />
+					进场时间
+					<input type="text" name="entryTime" />
+					起飞时间
+					<input type="text" name="takeOffTime" /><br><br>
+					起飞机场
+					<input type="text" name="SIDAps" />
+					ICAO
+					<input type="text" name="SIDApsICAO" />
+					降落机场
+					<input type="text" name="STARAps" />
+					ICAO
+					<input type="text" name="STARApsICAO" /><br><br>
+					飞行距离
+					<input type="text" name="flightDistance" />
+					航路
+					<input type="text" name="route" /><br><br>
+					建议机型
+					<input type="text" name="planeType" />
+					巡航高度
+					<input type="text" name="flightLevel" />
+					巡航速度
+					<input type="text" name="cruiseSpeed" /><br><br>
+					备注
+					<input type="text" name="remarks" /><br><br>
+					<input type="submit" id="submit" name="提交" />
+					
+				</form>
+			</div>
+		</article>
+	</body>
+</html>
