@@ -1,0 +1,75 @@
+/* 边缘间距全局处理 */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
+}
+/* 文字字体全局处理 */
+body{
+	font-family: "Arial"," microsoft yahei";
+}
+h1,h2 {
+	font-weight: normal;
+}
+p {
+	font-size: 14px;
+	line-height: 30px;
+}
+/* 首页图片 */
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+/* 头 */
+header {
+	background-color: #3742fa;
+	min-width: 75rem;
+}
+.header_title {
+	font-size: 1.4rem;
+	color: #FFFFFF;
+	text-align: center;
+}
+.show_time{
+	/* width: 10rem; */
+	font-size: 1.5rem;
+	color: #FFFFFF;
+}
+header nav {
+	/* border: 2px solid white; */
+	margin: 0px auto 0px auto;
+	background-color: #1890ff;
+}
+header nav ul {
+	padding-left: 50px;
+	height: 10px;
+}
+header nav ul li {
+	padding-bottom: 10px;
+	padding-top: 20px;
+	float: left;
+	width: 150px;
+}
+a {
+	color:  #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: orange;
+}
+/* article */
+.flightInfo {
+	background-color: #1890FF;
+}
+article h2 {
+	color: #FFFFFF;
+	padding-left: 10px;
+}
+footer {
+	background-color: #1890FF;
+}
+footer p {
+	color: lightgray;
+	text-align: center;
+}
