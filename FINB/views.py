@@ -15,19 +15,14 @@ def passwordCheck(request):
     password = request.POST['password']
 
     #密码检测
-    verifiedPasswordList = []
-    verifiedPasswordList.append(password)
-    print(verifiedPasswordList)
-    StandardPasswordList = ['80808000',
+    print(password)
+    standardPasswordList = ['80808000',
                             '80008080',
                             '123456']
-    for each in StandardPasswordList:
-        print(each)
-
-        if each not in verifiedPasswordList:
-            return render(request, 'passwordFlase.html')
-        else:
-            return render(request, 'skipping.html', context={'password': password})
+    if password not in standardPasswordList:
+        return render(request, 'passwordFalse.html')
+    else:
+        return render(request, 'skipping.html', context={'password': password})
 
 
 
