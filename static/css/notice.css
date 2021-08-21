@@ -44,7 +44,7 @@ header nav ul li {
 	float: left;
 	width: 150px;
 }
-a {
+header nav ul li a {
 	color: #ced6e0;
 	text-decoration: none;
 }
@@ -53,4 +53,16 @@ a:hover {
 }
 body {
 	background-color: #dfe4ea;
+}
+article .time_list {
+	float: left;
+	padding: 20px 40px 10px 10px;
+	text-align: center;
+	border: 3px solid black;
+}
+article .info {
+	float: left;
+	margin: 0;
+	padding: 30px 0 0 10px;
+	width: 800px;
 }
